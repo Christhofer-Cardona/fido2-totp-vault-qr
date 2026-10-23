@@ -13,7 +13,7 @@ authors = [{name = "Christhofer Cardona"}]
 maintainers = [{name = "Christhofer Cardona"}]
 dependencies = [
   "fido2-totp-vault>=0.2,<0.3",
-  "Pillow>=11,<13",
+  "Pillow>=11,<14",
   "zxing-cpp>=2.3,<4",
 ]
 classifiers = [
