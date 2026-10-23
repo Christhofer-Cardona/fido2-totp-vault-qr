@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fido2-totp-vault-qr"
+version = "0.1.0"
+description = "Offline QR image import for FIDO2 TOTP Vault"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "GPL-3.0-or-later"
+authors = [{name = "Christhofer Cardona"}]
+maintainers = [{name = "Christhofer Cardona"}]
+dependencies = [
+  "fido2-totp-vault>=0.2,<0.3",
+  "Pillow>=11,<13",
+  "zxing-cpp>=2.3,<4",
+]
+classifiers = [
+  "Environment :: Console",
+  "Operating System :: MacOS",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Security",
+]
+
+[project.scripts]
+fido2-totp-qr = "fido2_totp_vault_qr.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Christhofer-Cardona/fido2-totp-vault-qr"
+Issues = "https://github.com/Christhofer-Cardona/fido2-totp-vault-qr/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
